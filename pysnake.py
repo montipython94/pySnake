@@ -10,6 +10,8 @@ red = (213, 50, 80)
 green = (0, 255, 0)
 blue = (75, 139, 190)
 
+colorOfSnake = (white, yellow, red, blue)
+
 dis_width = 300
 dis_height = 200
 dis = pygame.display.set_mode((dis_width, dis_height))
@@ -32,7 +34,7 @@ def score(score):
 #Snake
 def snake(snake_block, snake_list):
     for x in snake_list:
-        pygame.draw.rect(dis, white, [x[0], x[1], snake_block, snake_block])
+        pygame.draw.rect(dis, random.choice(colorOfSnake), [x[0], x[1], snake_block, snake_block])
 
 #Message
 def message(msg, color):
